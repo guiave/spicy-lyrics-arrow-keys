@@ -63,6 +63,7 @@ import Whentil from "./modules/Whentil.ts";
 import App from "./utils/app.ts";
 import { initSession } from "./utils/SessionManager/index.ts";
 import { jitter } from "./utils/jitter.ts";
+import { initializeLyricsKeyboardNavigation } from "./utils/Lyrics/KeyboardNavigation.ts";
 
 async function main() {
   const appLogger = new Logger("App");
@@ -81,6 +82,8 @@ async function main() {
     showMigrationModal();
     return;
   }
+
+  initializeLyricsKeyboardNavigation();
 
   Global.SetScope("fullscreen.open", false);
 

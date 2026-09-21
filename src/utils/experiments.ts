@@ -56,6 +56,13 @@ export const EXPERIMENTS = [
     default: true,
     pageClass: "Exp_DuetLinePadding",
   },
+  {
+    id: "lyricsKeyboardNavigation",
+    label: "Lyrics Keyboard Navigation",
+    description:
+      "Use the left and right arrow keys to seek to the previous or next lyric line. Disable to leave arrow-key playback unchanged.",
+    default: true,
+  },
 ] as const satisfies readonly Experiment[];
 
 /** A registry entry, narrowed to its literal `id` — what the UI iterates over. */
